@@ -1,0 +1,12 @@
+
+      div.padding {
+        padding-top: 70px;
+      }
+        body.background{
+          background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgba(90,110,219,1) 87%);
+        }
+        div.background{
+          background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgba(90,130,219,1) 0%, rgba(90,110,219,1) 87%);
+        }
