@@ -138,7 +138,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
 
             <script>
               const arrayOfExperts = [];
-              const expertFred = ["Fred Waterdale", "30$/H", "Fred Waterdale is a graduate of the school of bike repair. He has devoted the last 25 years of his life to master the craft of both handle bar and chain repair. To Fred, Bike repair is a form of art, it is a craft mastered by very few that provides a product of immaculate beauty unmatched by any other form of art. Anyway, Fred would be happy to fix your bike."]
+              const expertFred = ["Fred Waterdale", "30$/H", "Fred Waterdale is a graduate of the school of bike repair. He has devoted the last 25 years of his life to mastering the craft of both handle bar and chain repair. To Fred, Bike repair is a form of art, it is a craft mastered by very few that provides a product of immaculate beauty unmatched by any other form of art. Anyway, Fred would be happy to fix your bike."]
               const expertCarrie = ["Carrie Smith", "25$/H", "Carrie Smith has been repairing bikes for the last 15 years. She focuses mainly on handle bar repair and tire repair."]
               const expertJanie = ["Janie Cardenas", "20$/H", "Jannie Cardenas has been repairing bikes for the last 10 years. Her experties lie in handle bar repair and frame repair."]
               const expertRodney= ["Rodney Barnes", "35$/H", "Rodney Barnes has been repairing bikes for the last 50 years. He has repaired just about any kind of bike imaginable. Rodney excels at chain, tire repair and frame repair."]
@@ -161,6 +161,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
                 document.querySelector('#expertSelect').textContent = 'Select a handle bar repair expert';
                 document.querySelector('#serviceCardParagraph').textContent = 'We offer a full handle bar repair, this includes repairs to the handlebar itself repair to the brakes, and repair to the bell  including bell repair. We also offer a full replacement if repair is not possible.';
                 document.querySelector('#serviceCardTitle').textContent = 'Handle Bar Repair';
+                document.querySelector('#serviceCardPrice').textContent = '30$/h';
                 document.querySelector('#serviceCard').style.visibility = "visible";
                 document.querySelector('#serviceCardImg').src = "assets/HandleBarRepair.jpg"
                 document.getElementById('expertSelect').disabled = false;
@@ -173,6 +174,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
                 document.querySelector('#expertSelect').textContent = 'Select a chain repair expert';
                 document.querySelector('#serviceCardParagraph').textContent = 'We offer world class full chain repair, chain replacement and chain greasing with a level of quality that can not be found anywhere else. ';
                 document.querySelector('#serviceCardTitle').textContent = 'Chain Repair';
+                document.querySelector('#serviceCardPrice').textContent = '25$/h';
                 document.querySelector('#serviceCard').style.visibility = "visible";
                 document.querySelector('#serviceCardImg').src = "assets/BikeChainRepair.jpg"
                 document.getElementById('expertSelect').disabled = false;
@@ -185,6 +187,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
                 document.querySelector('#expertSelect').textContent = 'Select a tire repair expert';
                 document.querySelector('#serviceCardParagraph').textContent = 'Some of the services we offer here at Bike Repair Shop include tire inflation, tire replacement and tire patching. ';
                 document.querySelector('#serviceCardTitle').textContent = 'Chain Repair';
+                document.querySelector('#serviceCardPrice').textContent = '20$/h';
                 document.querySelector('#serviceCard').style.visibility = "visible";
                 document.querySelector('#serviceCardImg').src = "assets/TireRepair.jpg";
                 document.getElementById('expertSelect').disabled = false;
@@ -197,6 +200,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
                 document.querySelector('#expertSelect').textContent = 'Select a frame repair expert';
                 document.querySelector('#serviceCardParagraph').textContent = 'We offer full repair for damaged frames. We can also replace your frame with a new customizable bike frame.';
                 document.querySelector('#serviceCardTitle').textContent = 'Frame Repair';
+                document.querySelector('#serviceCardPrice').textContent = '30$/h';
                 document.querySelector('#serviceCard').style.visibility = "visible";
                 document.querySelector('#serviceCardImg').src = "assets/BikeFrameRepair.jpg";
                 document.getElementById('expertSelect').disabled = false;
@@ -236,6 +240,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
                 <img src="" id="serviceCardImg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title" id="serviceCardTitle"></h5>
+                  <h3 class="card-text" id="serviceCardPrice"></h3>
                   <p class="card-text" id="serviceCardParagraph"></p>
                 </div>
               </div>
