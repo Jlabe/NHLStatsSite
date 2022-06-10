@@ -15,14 +15,27 @@
 
     <style>
       div.padding {
-        padding-top: 70px;
+        padding-top: 100px;
       }
       </style>
+      <style>
+        div.paddingLeft {
+          padding-left: 70px;
+        }
+        </style>
+
+        <style>
+          div.paddingFarLeft {
+            padding-left: 230px;
+          }
+          </style>
 </head>
 <body class="background">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <nav class="navbar navbar-expand-lg navbar navbar-dark fixed-top bg-primary nav-tabs">
-        <a class="navbar-brand" href="#home">Navbar</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="/assets/output-onlinepngtools.png" alt="" width="50" height="50">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,31 +43,129 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Appointment.html">Make Appointment</a>
+              <a class="nav-link text-white" href="Appointment.html">Make Appointment</a>
             </li>
         
         </div>
       </nav>
 
-      
-      <div class="container padding">
-        <div class="row">
-          <div class="col text-center">
-            <h1>
-              Make An Appointment
-            </h1>
-            <br>
-            <h5>
-              Please fill out the required information to book your appointment.
-            </h5>
+      <section id="Services ">
+        <div class="container padding">
+          <div class="row">
+            <div class="col text-center">
+              <h1>
+                Make An Appointment
+              </h1>
+              <br>
+              <h5>
+                Please fill out the required information to book your appointment.
+              </h5>
+            </div>
+          </div>
+          <div class="row paddingLeft">
+            <div class="col form-group">
+              <label for="date" class="col-sm-1 col-form-label">Service</label>
+                <div class="col-sm-4">
+                  <div class="dropdown">
+                
+                    <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select A Service
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" id="handleRepair" onclick="handleBarExperts()" href="#">Handle Bar Repair</a></li>
+                      <li><a class="dropdown-item" onclick="chainRepairExperts()" href="#">Chain Repair</a></li>
+                      <li><a class="dropdown-item" onclick="tireRepairExperts()" href="#">Tire Repair</a></li>
+                      <li><a class="dropdown-item" onclick="frameRepairExperts()" href="#">Frame Repair</a></li>
+                    </ul>
+                  </div>
+                </div> 
+              
+            </div>
+            <div class="col form-group paddingFarLeft">
+
+                <div class="col-sm-4">
+                  <div class="dropdown">
+                    <label for="date" class="col-sm-1 col-form-label">Expert</label>
+                    <button class="btn btn-secondary dropdown-toggle" disabled type="button" id="expertSelect" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select An Expert 
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" id="expert1" onclick="selectExpert(this.id)" href="#">Action</a></li>
+                      <li><a class="dropdown-item" id="expert2" onclick="selectExpert(this.id)" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" id="expert3" onclick="selectExpert(this.id)" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              
+            </div>
+
+            <script>
+              
+              function handleBarExperts(){
+                document.querySelector('#expert1').textContent = "Fred Waterdale";
+                document.querySelector('#expert2').textContent = 'Carrie Smith';
+                document.querySelector('#expert3').textContent = 'Janie Cardenas';
+                document.querySelector('#expertSelect').textContent = 'Select a handle bar repair expert';
+                document.querySelector('#dropdownMenuButton1').textContent = 'Handle Bar Repair';
+                document.getElementById('expertSelect').disabled = false;
+              }
+
+              function chainRepairExperts(){
+                document.querySelector('#expert1').textContent = 'Fred Waterdale';
+                document.querySelector('#expert2').textContent = 'Rodney Barnes';
+                document.querySelector('#expert3').textContent = 'Gregory Nichols';
+                document.querySelector('#expertSelect').textContent = 'Select a chain repair expert';
+                document.querySelector('#dropdownMenuButton1').textContent = 'Chain Repair';
+                document.getElementById('expertSelect').disabled = false;
+              }
+
+              function tireRepairExperts(){
+                document.querySelector('#expert1').textContent = 'Amiee Chavez';
+                document.querySelector('#expert2').textContent = 'Carrie Smith';
+                document.querySelector('#expert3').textContent = 'Rodney Barnes';
+                document.querySelector('#expertSelect').textContent = 'Select a tire repair expert';
+                document.querySelector('#dropdownMenuButton1').textContent = 'Tire Repair';
+                document.getElementById('expertSelect').disabled = false;
+              }
+
+              function frameRepairExperts(){
+                document.querySelector('#expert1').textContent = 'William Kavanaugh';
+                document.querySelector('#expert2').textContent = 'Rodney Barnes';
+                document.querySelector('#expert3').textContent = 'Jannie Cardenas';
+                document.querySelector('#expertSelect').textContent = 'Select a frame repair expert';
+                document.querySelector('#dropdownMenuButton1').textContent = 'Frame Repair';
+                document.getElementById('expertSelect').disabled = false;
+              }
+
+              function selectExpert(id){
+                var button = document.getElementById(id);
+                var text = button.textContent;
+                document.querySelector('#expertSelect').textContent = text;
+                }
+
+                function selectTime(id){
+                var button = document.getElementById(id);
+                var text = button.textContent
+                document.querySelector('#dropdownMenuButton2').textContent = text;
+                }
+            </script>
+
+            
+            <div class="col">
+
+            </div>
           </div>
         </div>
+      </section>
+
+      
+      <div class="container padding">
         <div class="row">
           <div class="col">
             <section class="container">
@@ -88,18 +199,18 @@
             <br>
               <div class="dropdown">
                 
-                <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                   Select a time
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">9:00AM</a></li>
-                  <li><a class="dropdown-item" href="#">10:00AM</a></li>
-                  <li><a class="dropdown-item" href="#">11:00AM</a></li>
-                  <li><a class="dropdown-item" href="#">12:00PM</a></li>
-                  <li><a class="dropdown-item" href="#">1:00PM</a></li>
-                  <li><a class="dropdown-item" href="#">2:00PM</a></li>
-                  <li><a class="dropdown-item" href="#">3:00PM</a></li>
-                  <li><a class="dropdown-item" href="#">4:00PM</a></li>
+                  <li><a class="dropdown-item" id="nine" href="#" onclick="selectTime(this.id)">9:00AM</a></li>
+                  <li><a class="dropdown-item" id="ten" href="#" onclick="selectTime(this.id)">10:00AM</a></li>
+                  <li><a class="dropdown-item" id="eleven" href="#" onclick="selectTime(this.id)">11:00AM</a></li>
+                  <li><a class="dropdown-item" id="twelve" href="#" onclick="selectTime(this.id)">12:00PM</a></li>
+                  <li><a class="dropdown-item" id="one" href="#" onclick="selectTime(this.id)">1:00PM</a></li>
+                  <li><a class="dropdown-item" id="two" href="#" onclick="selectTime(this.id)">2:00PM</a></li>
+                  <li><a class="dropdown-item" id="three" href="#" onclick="selectTime(this.id)">3:00PM</a></li>
+                  <li><a class="dropdown-item" id="four" href="#" onclick="selectTime(this.id)">4:00PM</a></li>
                 </ul>
               </div>
           </div>

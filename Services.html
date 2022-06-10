@@ -9,7 +9,28 @@
       div.padding {
         padding-top: 70px;
       }
+    </style>
+
+      <style>
+        div.paddingServiceCard {
+          padding-top: 270px;
+          padding-right: 70px;
+        }
       </style>
+
+      <style>
+        div.paddingExpertCard {
+          padding-top: 270px;
+          padding-left: 70px;
+        }
+      </style>
+      
+      <style>
+      
+        div.paddingBox {
+          padding-top: 350px;
+        }
+        </style>
 
       <style>
         body.background{
@@ -31,7 +52,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
     crossorigin="anonymous"></script>
     
     <nav class="navbar navbar-expand-lg navbar navbar-dark fixed-top bg-primary nav-tabs">
-        <a class="navbar-brand" href="#home">Navbar</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/output-onlinepngtools.png" alt="" width="50" height="50">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,10 +62,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Services.html">Services</a>
+              <a class="nav-link text-white" href="Services.html">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Appointment.html">Make Appointment</a>
@@ -50,45 +73,89 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
         
         </div>
       </nav>
+    
 
-      <section id="Services">
-        <div class="container padding">
+      <section id="Services ">
+        <div class="container paddingBox">
+          <div class="container-lg">
+            <div class="row  g-0 align-items-center justify-content-center position-absolute start-50 translate-middle">
+                <div class="card text-center justify-content-center border border-1 shadow-lg p-1 mb-5 bg-body rounded" style="width: 60rem;">
+                    <div class="card-body bg-primary">
+                      <div class="row">
+                        <div class="col text-center">
+                          <h1 id="title" class="text-white">
+                            What We Offer
+                          </h1>
+                          <p class="text-white">At Bike Repair Shop we offer a variety of repair oriented services with some of the best experts in the field. To use service selection tool, first select 
+                            a service you wish to view. Next, select an expert in that field. You will be provided with information on that service and information on the expert.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select A Service
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" id="handleRepair" onclick="handleBarExperts()" href="#">Handle Bar Repair</a></li>
+                            <li><a class="dropdown-item" onclick="chainRepairExperts()" href="#">Chain Repair</a></li>
+                            <li><a class="dropdown-item" onclick="tireRepairExperts()" href="#">Tire Repair</a></li>
+                            <li><a class="dropdown-item" onclick="frameRepairExperts()" href="#">Frame Repair</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <div class="col">
+                        <div class="dropdown">
+                          
+                          <button class="btn btn-secondary dropdown-toggle" disabled type="button" id="expertSelect" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select An Expert 
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" id="expert1" onclick="selectExpert(this.id)" href="#">Action</a></li>
+                            <li><a class="dropdown-item" id="expert2" onclick="selectExpert(this.id)" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" id="expert3" onclick="selectExpert(this.id)" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col">
+          
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
           <div class="row">
-            <div class="row ">
-              <div class="col text-center">
-                <h1 id="title">
-                  What We Offer
-                </h1>
-                <p>At Bike Repair Shop we offer a variety of repair oriented services with some of the best experts in the field. To use service selection tool, first select 
-                  a service you wish to view. Next, select an expert in that field. You will be provided with information on that service and information on the expert.
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="dropdown">
-                
-                <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Select A Service
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" id="handleRepair" onclick="handleBarExperts()" href="#">Handle Bar Repair</a></li>
-                  <li><a class="dropdown-item" onclick="chainRepairExperts()" href="#">Chain Repair</a></li>
-                  <li><a class="dropdown-item" onclick="tireRepairExperts()" href="#">Tire Repair</a></li>
-                  <li><a class="dropdown-item" onclick="frameRepairExperts()" href="#">Frame Repair</a></li>
-                </ul>
-              </div>
-            </div>
+            
+            
 
             <script>
-              var x = "Fred Waterdale";
-              
               const arrayOfExperts = [];
               const expertFred = ["Fred Waterdale", "30$/H", "Fred Waterdale is a graduate of the school of bike repair. He has devoted the last 25 years of his life to master the craft of both handle bar and chain repair. To Fred, Bike repair is a form of art, it is a craft mastered by very few that provides a product of immaculate beauty unmatched by any other form of art. Anyway, Fred would be happy to fix your bike."]
+              const expertCarrie = ["Carrie Smith", "25$/H", "Carrie Smith has been repairing bikes for the last 15 years. She focuses mainly on handle bar repair and tire repair."]
+              const expertJanie = ["Janie Cardenas", "20$/H", "Jannie Cardenas has been repairing bikes for the last 10 years. Her experties lie in handle bar repair and frame repair."]
+              const expertRodney= ["Rodney Barnes", "35$/H", "Rodney Barnes has been repairing bikes for the last 50 years. He has repaired just about any kind of bike imaginable. Rodney excels at chain, tire repair and frame repair."]
+              const expertGregory= ["Gregory Nichols", "20$/H", "Gregory Nichols has been repairing bikes for the last 5 years. He is still a beginner at the craft of bike repair and thus can only repair chains however, trust us when we say his chain repairing skills are about the best you will find anywhere."]
+              const expertAmiee= ["Amiee Chavez", "30$/H", "Amiee Chavez has been repairing bikes for the last 45 years. She has devoted most of her life to the mastering tire repair and has become a master at the craft."]
+              const expertWilliam = ["William Kavanaugh", "25$/H", "William has been a bike repair expert since he graduate the school of bike repair 12 years ago. He has dedicated himself to mastering frame repair."]
 
               arrayOfExperts[0] = expertFred;
+              arrayOfExperts[1] = expertCarrie;
+              arrayOfExperts[2] = expertJanie;
+              arrayOfExperts[3] = expertRodney;
+              arrayOfExperts[4] = expertGregory;
+              arrayOfExperts[5] = expertAmiee;
+              arrayOfExperts[5] = expertWilliam;
               
               function handleBarExperts(){
-                document.querySelector('#expert1').textContent = x;
+                document.querySelector('#expert1').textContent = 'Fred Waterdale';
                 document.querySelector('#expert2').textContent = 'Carrie Smith';
                 document.querySelector('#expert3').textContent = 'Janie Cardenas';
                 document.querySelector('#expertSelect').textContent = 'Select a handle bar repair expert';
@@ -114,7 +181,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
               function tireRepairExperts(){
                 document.querySelector('#expert1').textContent = 'Amiee Chavez';
                 document.querySelector('#expert2').textContent = 'Carrie Smith';
-                document.querySelector('#expert3').textContent = 'Karen King';
+                document.querySelector('#expert3').textContent = 'Rodney Barnes';
                 document.querySelector('#expertSelect').textContent = 'Select a tire repair expert';
                 document.querySelector('#serviceCardParagraph').textContent = 'Some of the services we offer here at Bike Repair Shop include tire inflation, tire replacement and tire patching. ';
                 document.querySelector('#serviceCardTitle').textContent = 'Chain Repair';
@@ -125,8 +192,8 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
 
               function frameRepairExperts(){
                 document.querySelector('#expert1').textContent = 'William Kavanaugh';
-                document.querySelector('#expert2').textContent = 'James Cannon';
-                document.querySelector('#expert3').textContent = 'Gregory Nichols';
+                document.querySelector('#expert2').textContent = 'Rodney Barnes';
+                document.querySelector('#expert3').textContent = 'Jannie Cardenas';
                 document.querySelector('#expertSelect').textContent = 'Select a frame repair expert';
                 document.querySelector('#serviceCardParagraph').textContent = 'We offer full repair for damaged frames. We can also replace your frame with a new customizable bike frame.';
                 document.querySelector('#serviceCardTitle').textContent = 'Frame Repair';
@@ -141,11 +208,12 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
                 console.log(arrayOfExperts[0])
                 for (const x in arrayOfExperts){
                   if (text == arrayOfExperts[x][0]){
-                    
-                    document.querySelector('#expertCard').textContent = arrayOfExperts[x][2];
+                    console.log(arrayOfExperts[x][0])
+                    document.querySelector('#expertCardParagraph').textContent = arrayOfExperts[x][2];
+                    document.querySelector('#expertCardTitle').textContent = arrayOfExperts[x][0];
                     document.querySelector('#expertCard').style.visibility = "visible";
                     document.querySelector('#expertCardImg').style.visibility = "visible";
-                    document.querySelector('#expertCardImg').src = "assets/BikeFrameRepair.jpg";
+
                     
                   }
                 }
@@ -155,23 +223,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
               }
             </script>
 
-            <div class="col align-items-center justify-content-center">
-              <div class="dropdown">
-                
-                <button class="btn btn-secondary dropdown-toggle" disabled type="button" id="expertSelect" data-bs-toggle="dropdown" aria-expanded="false">
-                  Select An Expert 
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" id="expert1" onclick="selectExpert(this.id)" href="#">Action</a></li>
-                  <li><a class="dropdown-item" id="expert2" onclick="selectExpert(this.id)" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" id="expert3" onclick="selectExpert(this.id)" href="#">Something else here</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col">
-
-            </div>
-          </div>
+            
         </div>
       </section>
 
@@ -179,20 +231,24 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgb
         
         <div class="container-lg">
           <div class="row my-5 g-0 align-items-center justify-content-center invisible">
-            <div class="card text-white bg-primary mb-3" id="serviceCard" style="width: 18rem;" style="height: 18rem;">
-              <img src="" id="serviceCardImg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title" id="serviceCardTitle"></h5>
-                <p class="card-text" id="serviceCardParagraph"></p>
+            <div class="col paddingServiceCard">
+              <div class="card text-white bg-primary mb-3 " id="serviceCard" style="width: 18rem;" style="height: 18rem;">
+                <img src="" id="serviceCardImg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="serviceCardTitle"></h5>
+                  <p class="card-text" id="serviceCardParagraph"></p>
+                </div>
               </div>
             </div>
-            <div class="card text-white bg-primary mb-3" id="expertCard" style="width: 18rem;" style="height: 18rem;">
-              <img src="" id="expertCardImg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">r</h5>
-                <p class="card-text"></p>
+            <div class="col paddingExpertCard">
+              <div class="card text-white bg-primary mb-3 w-50" id="expertCard" style="width: 18rem;" style="height: 18rem;">
+                <img src="assets/BlankProfile.png" id="expertCardImg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="expertCardTitle"></h5>
+                  <p class="card-text" id="expertCardParagraph"></p>
+                </div>
               </div>
-            </div>
+            </div> 
             </div>
           </div>
         </div>
