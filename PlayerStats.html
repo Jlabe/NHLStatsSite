@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Website Project</title>
+    <style>
+      div.padding {
+        padding-top: 170px;
+      }
+    </style>
+      
+  <link rel="stylesheet" href="myStyle.css">
+</head>
+<body class="background">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar navbar-dark fixed-top bg-primary nav-tabs">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/output-onlinepngtools.png" alt="" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="TeamStatsPage.html">Team Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="PlayerStats.html">Player Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="LeagueStats.html">League Stats</a>
+            </li>
+        
+        </div>
+        <a class="btn btn-secondary rounded-pill border border-white" href="PlayerSearchLandPage.html" role="button">Search</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </nav>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <section id="PlayerSearch">
+        <section id="contact">
+          <div class="container-lg">
+            
+            <div class="text-center text-white">
+              <h2>Search For A Player</h2>
+            </div>
+            <div class="row justify-content-center my-5">
+              <div class="col-lg-6">
+                
+                <form>
+                  <div class="form-group">
+                    <label for="name" class="text-white">Player First Name</label>
+                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="name" class="text-white">Player Last Name</label>
+                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+
+                  </div>
+                  <br>
+                  <div class="mb-4 text-center">
+                    <a class="btn btn-secondary rounded-pill" href="PlayerSearchLandPage.html" role="button">Search</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </section>
+
+      <section id="LeaderBoard">
+        <div class="container-lg padding">
+          <div class="row  g-0 align-items-center justify-content-center position-absolute start-50 translate-middle">
+            <div class="col">
+              <div class="dropdown padding paddingLeft">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  2022
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">2022</a>
+                  <a class="dropdown-item" href="#">2021</a>
+                  <a class="dropdown-item" href="#">2020</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        
+        <div class="container padding">
+          <h1 class="text-center text-white">League leader for 2022</h1> 
+          <table class="table table-secondary">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">GP</th>
+                <th scope="col">Goals</th>
+                <th scope="col">Assists</th>
+                <th scope="col">PTS</th>
+                <th scope="col">+/-</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <a href="TeamInfo.html" id="team1">Connor McDavid</a>
+                </th>
+                <td id="games1" >80</td>
+                <td id="goals1" >44</td>
+                <td id="assists1">79</td>
+                <td id="points1">123</td>
+                <td id="plusMinus1">28</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <a href="TeamInfo.html" id="team2">Johnny Gaudreau</a>
+                </th>
+                <td id="games2" >82</td>
+                <td id="goals2">40</td>
+                <td id="assists2">75</td>
+                <td id="points2">115</td>
+                <td id="plusMinus2">64</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <a href="TeamInfo.html" id="team3">Jonathan Huberdeau</a>
+                </th>
+                <td id="games3" >80</td>
+                <td id="goals3">30</td>
+                <td id="assists3">85</td>
+                <td id="points3">115</td>
+                <td id="plusMinus3">35</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </section>
+
+      <nav aria-label="Page navigation example ">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      
+</body>
+</html>

@@ -4,7 +4,7 @@
       }
         body.background{
           background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,171,219,1) 0%, rgba(90,110,219,1) 87%);
+          background: linear-gradient(360deg, #0951A2 0%, #CE860B 100%);
         }
         div.background{
           background: rgb(2,0,36);
